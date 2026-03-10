@@ -3,25 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>深海探索之旅</title>
+    <title>東澳，從這裡開始 | 起點，從未被發現</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section id="surface" class="scene">
-        <h1 class="fade-in">深海探索之旅</h1>
-        <p>向下滾動，潛入未知</p>
-        <div class="scroll-indicator">↓</div>
+    <nav>
+        <div class="stamp-collection">我的印章：<span id="stamp-count">0</span> / 3</div>
+    </nav>
+
+    <section id="ocean" class="scene">
+        <h1 class="fade-in">東澳，從這裡開始</h1>
+        <p class="fade-in slogan">起點，從未被發現。</p>
+        
+        <div class="game-area fade-in">
+            <p>點擊海浪，看看誰來了？</p>
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">🌊</div>
+                    <div class="card-back">🐋 虎鯨</div>
+                </div>
+            </div>
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-inner">
+                    <div class="card-front">🌊</div>
+                    <div class="card-back">🐟 飛魚</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">向下踏上旅程 ↓</div>
     </section>
 
-    <section id="twilight" class="scene">
-        <h2 class="slide-in-left">微光層的生機</h2>
-        <div class="interactive-fish" data-info="海龜：壽命可達80年">🐢</div>
+    <section id="forest" class="scene">
+        <h2 class="slide-in">循水而上，泰雅獵徑</h2>
+        <p class="slide-in">中央山脈的起點，藏著古老的呼喚。</p>
+        
+        <div class="quiz-area slide-in">
+            <p>在森林岔路，你要跟隨什麼聲音？</p>
+            <button onclick="getStamp('瀑布')">磅礡的澳花瀑布</button>
+            <button onclick="getStamp('微風')">山林裡的微風</button>
+            <p id="quiz-result"></p>
+        </div>
     </section>
 
-    <section id="midnight" class="scene">
-        <div class="flashlight-overlay"></div>
-        <h2>無光層的發光生物</h2>
-        <div class="hidden-creature">💡 鮟鱇魚</div>
+    <section id="peak" class="scene">
+        <h2 class="fade-in">脊梁之巔，俯瞰宜蘭</h2>
+        <p class="fade-in">這不是終點，是一切事物的起始點。</p>
+        <button class="cta-btn fade-in">領取我的東澳起點證明</button>
     </section>
 
     <script src="script.js"></script>
